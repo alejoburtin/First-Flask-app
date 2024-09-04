@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #666666;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #999999;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile: {{username}}</h1>
+        <h2>Welcome, {{ username }}!</h2>
+        <p>This is the profile page for user {{ username }}.</p>
+        <img class="profile-image" src="{{ url_for('static', filename='IMG-20210704-WA0000.jpg') }}" alt="My Highschool graduation">
+    </div>
+</body>
+</html>
